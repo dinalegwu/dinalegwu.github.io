@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dorina's Provisions & More — quality groceries, drinks, household essentials and personal care products at affordable prices.">
+    <title>Dorina's — Provisions & More</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1604719312566-8912e9227c6a">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="#home" aria-label="Dorina's home">Dorina's Shopping and Mall</a>
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                    <span class="theme-label">Dark</span>
+                </button>
+                <button class="cart-button" type="button" id="cart-button">🛒 Cart <span class="cart-count" id="cart-count">0</span></button>
+                <button class="menu-button" type="button" id="menu-button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="hero-tag">QUALITY • AFFORDABLE • CONVENIENT</p>
+                <h1>Quality Goods, Everyday Essentials</h1>
+                <p>Fresh provisions, drinks, household items and more — all in one place.</p>
+                <button class="primary-button" type="button" id="shop-now">Shop Now <span aria-hidden="true">→</span></button>
+            </div>
+        </section>
+
+        <section class="quick-shop" aria-labelledby="quick-shop-title">
+            <div class="section-heading compact-heading">
+                <p class="eyebrow">FIND WHAT YOU NEED</p>
+                <h2 id="quick-shop-title">What are you shopping for?</h2>
+            </div>
+            <form class="search-wrap" id="search-form" role="search">
+                <label class="sr-only" for="product-search">Search products</label>
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input id="product-search" type="search" placeholder="Search products, brands or categories..." autocomplete="off" enterkeyhint="search">
+                <button id="clear-search" class="clear-search" type="button" aria-label="Clear search" hidden>×</button>
+                <button id="search-button" class="search-button" type="submit">Search</button>
+            </form>
+        </section>
+
+        <section id="categories" class="categories-section" aria-labelledby="categories-title">
+            <div class="section-heading">
+                <p class="eyebrow">SHOP BY CATEGORY</p>
+                <h2 id="categories-title">Browse the store</h2>
+                <p>Choose a category to see the products you need.</p>
+            </div>
+            <div id="category-grid" class="category-grid"></div>
+        </section>
+
+        <section id="products" class="products" aria-labelledby="products-title">
+            <div class="section-heading products-heading">
+                <div>
+                    <p class="eyebrow">OUR SELECTION</p>
+                    <h2 id="products-title">Featured products</h2>
+                    <p id="product-status" class="product-status" aria-live="polite"></p>
+                    <p id="product-results-label">A few customer favourites to get you started.</p>
+                </div>
+                <button id="view-all" class="secondary-button" type="button">View All Products</button>
+            </div>
+            <div id="product-container" class="product-container" aria-live="polite"></div>
+            <div id="empty-products" class="empty-state" hidden>
+                <div class="empty-icon" aria-hidden="true">⌕</div>
+                <h3>No products found</h3>
+                <p>Try a different search term or choose another category.</p>
+                <button id="reset-filters" class="secondary-button" type="button">Show all products</button>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-inner">
+                <div>
+                    <p class="eyebrow">ABOUT DORINA'S</p>
+                    <h2>Everyday essentials, made easier to find.</h2>
+                </div>
+                <p>At Dorina's, we provide different varieties of quality goods and everyday provisions at affordable prices — helping you get the essentials you need without the stress.</p>
+            </div>
+        </section>
+
+        <section id="cart" class="cart-section" aria-labelledby="cart-title">
+            <div class="section-heading">
+                <p class="eyebrow">YOUR ORDER</p>
+                <h2 id="cart-title">Shopping Cart</h2>
+                <p>Review your items before ordering on WhatsApp.</p>
+            </div>
+            <div id="cart-items"><p class="cart-empty">Your cart is empty.</p></div>
+            <div class="cart-summary">
+                <div class="cart-total-info">
+                    <span id="cart-item-count">0 items</span>
+                    <strong id="cart-total">₦0</strong>
+                </div>
+                <div class="cart-actions">
+                    <button class="order-button" id="order-whatsapp" type="button">Order on WhatsApp</button>
+                    <button class="clear-button" id="clear-cart" type="button">Clear Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <p class="eyebrow">NEED HELP?</p>
+            <h2>Ready to order?</h2>
+            <p>Contact Dorina's and we'll help you get what you need.</p>
+            <p class="phone">08148157968</p>
+            <button class="primary-button" id="contact-whatsapp" type="button">Contact Us on WhatsApp</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dorina's. All Rights Reserved.</p>
+    </footer>
+
+    <script src="products.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
